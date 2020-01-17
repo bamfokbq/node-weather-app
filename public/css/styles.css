@@ -77,6 +77,8 @@ h1 {
 }
 .about--article p{
     width: 80%;
+    font-weight: 500;
+    color: #808080;
 }
 /* FOOTER */
 footer {

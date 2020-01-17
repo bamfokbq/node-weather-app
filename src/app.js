@@ -1,4 +1,6 @@
 const express = require("express");
+const geocode = require('./utils/geocode');
+const forecast = require('./utils/forecast');
 const path = require("path");
 const hbs = require("hbs");
 
@@ -36,6 +38,52 @@ app.get("/help", (req, res) => {
     name: "Paa Bamfo",
   });
 });
+
+app.get('/weather', (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: 'Please, provide a valid address'
+    })
+  }
+
+  geocode(req.query.address, (error, {
+    latitude,
+    longitude,
+    location
+  }) => {
+    if (error) {
+      return res.send({
+        error
+      })
+    }
+
+    forecast(latitude, longitude, (error, forecastData) => {
+      if (error) {
+        return res.send({
+          error
+        })
+      }
+
+      res.send({
+        address: req.query.address,
+        forecast: forecastData,
+        location
+      })
+    })
+  })
+})
+
+app.get('/products', (req, res) => {
+  if (!req.query.search) {
+    return res.send({
+      error: "Please provide a valid term"
+    })
+  }
+
+  res.send({
+    products: []
+  })
+})
 
 app.get('/help/*', (req, res) => {
   res.render('error', {
