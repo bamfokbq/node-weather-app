@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Montserrat";
+    position: relative;
 }
 
 :root {
@@ -13,10 +14,12 @@ body {
 }
 
 .main-content {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     /* background-color: tomato; */
 }
-
+form{
+    /* flex-grow: 5; */
+}
 h1 {
     font-family: "Apercu Pro";
 }
@@ -84,6 +87,9 @@ h1 {
 footer {
     color: var(--head-color);
     background-color: var(--bg-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
