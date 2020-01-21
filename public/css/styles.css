@@ -83,6 +83,10 @@ h1 {
     font-weight: 500;
     color: #808080;
 }
+.about--name span{
+    background-image: linear-gradient(0.25turn, tomato, orange);
+    color: #FFFFFF;
+}
 /* FOOTER */
 footer {
     color: var(--head-color);
