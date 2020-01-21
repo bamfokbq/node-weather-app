@@ -83,7 +83,7 @@ h1 {
     font-weight: 500;
     color: #808080;
 }
-.about--name span{
+.about--article p span {
     background-image: linear-gradient(0.25turn, tomato, orange);
     color: #FFFFFF;
 }
