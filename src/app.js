@@ -5,6 +5,7 @@ const path = require("path");
 const hbs = require("hbs");
 
 const app = express();
+const port = process.env.PORT || 3000;
 // SETTING UP THE PATH
 const pathToDirectory = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -101,7 +102,6 @@ app.get('*', (req, res) => {
   })
 })
 // Running the
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log("SERVER RUNNING ON PORT:" + PORT);
+app.listen(port, () => {
+  console.log("SERVER RUNNING ON PORT:" + port);
 });
