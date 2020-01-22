@@ -14,14 +14,14 @@
     <div class="main-content">
         {{>header}}
     </div>
-    <h1>Please, type your location to find weather information...</h1>
+    <h1 class="form-header">Please, type your location to find weather information...</h1>
     <form action="">
-        <input type="text" placeholder="Location">
-        <button>Search</button>
+        <input class="location" type="text" placeholder="Location">
+        <button class="button">Search</button>
     </form>
     {{!-- MESSAGE OUTPUT --}}
     <div class="message__box">
-        <p id="message__one"></p>
+        <h5 id="message__one"></h5>
         <p id="message__two"></p>
     </div>
     {{>footer}}

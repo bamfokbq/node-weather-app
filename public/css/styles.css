@@ -17,9 +17,11 @@ body {
     /* flex-grow: 1; */
     /* background-color: tomato; */
 }
-form{
+
+form {
     /* flex-grow: 5; */
 }
+
 h1 {
     font-family: "Apercu Pro";
 }
@@ -65,29 +67,94 @@ h1 {
 }
 
 /* ABOUT STYLING */
-.about--section{
-   /* background-color: green; */
+.about--section {
+    /* background-color: green; */
 }
+
 .about--article {
     display: inline;
     line-height: 1.5;
 }
-.about--name{
+
+.about--name {
     color: var(--bg-color);
     font-family: 'Dancing Script',
-    cursive;
+        cursive;
     font-size: 2rem;
 }
-.about--article p{
+
+.about--article p {
     width: 80%;
     font-weight: 500;
     color: #808080;
 }
+
 .about--article p span {
     background-image: linear-gradient(0.25turn, #646464, #444444);
     color: #FFFFFF;
     padding: 0px 3px;
 }
+
+/* FORM / INPUT AND BUTTON */
+.form-header {
+    font-size: 1rem;
+    color: #646464;
+}
+
+form {
+    background-color: #454545;
+    width: max-content;
+    padding: 15px;
+    text-align: center;
+}
+
+.location {
+    border: 2px solid var(--bg-color);
+}
+
+.button {
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--head-color);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Montserrat";
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #5d5a5a;
+}
+
+.location,
+.button {
+    padding: 5px;
+}
+
+.message__box{
+    background-color: #838383;
+    height: 30vh;
+    width: 85%;
+    margin: 30px auto 50px auto;
+    padding: 15px;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.4),
+                -4px -5px 6px rgba(230, 230, 230, .9);
+    border-radius: 12px;
+    display: none;
+    transition: all .3s linear;
+}
+.message__box h5{
+    color: #fff;
+}
+input{
+    font-size: 1rem;
+     color: #292929;
+}
+input::placeholder{
+    font-size: 1rem;
+    color: #646464;
+}
+/* END INPUT AND BUTTON */
+
 /* FOOTER */
 footer {
     color: var(--head-color);
